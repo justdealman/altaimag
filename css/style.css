@@ -841,6 +841,41 @@ nav > ul > li > div .core > ul > li > ul li a:hover {
 .introduction .lc p a:hover {
 	border-bottom:1px solid transparent;
 }
+.introduction .slide {
+	overflow:hidden;
+	position:relative;
+	float:left;
+	width:665px;
+	height:269px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+.introduction .slide .pagination  {
+	position:absolute;
+	left:28px;
+	bottom:20px;
+	z-index:100;
+	margin:0;
+}
+.introduction .slide .pagination li {
+	float:left;
+}
+.introduction .slide .pagination li a {
+	display:block;
+	width:18px;
+	height:18px;
+	background:url('../img/slide_pagination.png') no-repeat left top;
+}
+.introduction .slide .pagination li.current a {
+	background-position:0 -18px;
+}
+.introduction .slide .container, .introduction .slide .container > div > div {
+	clear:both;
+	overflow:hidden;
+	width:665px;
+	height:269px;
+}
 .introduction .rc {
 	overflow:hidden;
 	position:relative;

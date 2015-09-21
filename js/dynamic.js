@@ -32,6 +32,17 @@ function aboutCoreH4() {
 	});
 }
 $(document).ready(function() {
+	if ( $('.slide').length > 0 ) {
+		$('.slide').slides({
+			generatePagination: true,
+			generateNextPrev: false,
+			container: 'container',
+			effect: 'fade',
+			crossfade: true,
+			play: 10000,
+			pause: 2500,
+		});
+	}
 	if ( $('.slider').length > 0 ) {
 		slider();
 		$('.slider').bind('swipeleft', function() {
