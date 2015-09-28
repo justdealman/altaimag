@@ -3834,20 +3834,18 @@ footer .additional h5 img {
 	float:none;
 }
 .new-l .core {
-	width:980px;
+	position:relative;
+	width:972px;
 	margin:0 0 23px;
 }
 .new-l .core li {
-	display:inline-block;
-	width:231px;
-	vertical-align:top;
-	margin:0 10px 0 0;
+	width:241px;
 }
 .new-l .core li.latest {
-	width:474px;
+	width:482px;
 }
 .new-l .core li > div {
-	margin:0 0 14px;
+	margin:0 12px 14px 0;
 }
 .new-l .core li > div h6 {
 	color:#9b9d9f;
