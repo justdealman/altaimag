@@ -542,13 +542,16 @@ nav > ul > li > div .core > ul {
 }
 nav > ul > li > div .core > ul > li {
 	position:relative;
-	display:inline-block;
+}
+nav > ul > li > div .core > ul > li > ul {
+	position:relative;
 	width:196px;
+	display:inline-block;
 	vertical-align:top;
 	padding:0 21px 29px 0;
 	margin:0 18px 14px 0;
 }
-nav > ul > li > div .core > ul > li:nth-child(3n) {
+nav > ul > li > div .core > ul > li > ul:nth-child(3n) {
 	padding-right:0;
 	margin-right:-10px;
 }
@@ -567,9 +570,6 @@ nav > ul > li > div .core > ul > li h5 a {
 }
 nav > ul > li > div .core > ul > li h5 a:hover {
 	text-decoration:underline;
-}
-nav > ul > li > div .core > ul > li  > ul {
-	margin:0;
 }
 nav > ul > li > div .core > ul > li > ul li {
 	font-size:13px;

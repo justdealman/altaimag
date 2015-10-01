@@ -249,17 +249,17 @@ $(document).ready(function() {
 		window.location = $(this).attr('data-href');
 		event.preventDefault();
 	});
-	if ( $('nav > ul > li > div .core ul').length > 0 ) {
-		$('nav > ul > li > div .core > ul').each(function() {
+	if ( $('nav > ul > li > div .core ul > li').length > 0 ) {
+		$('nav > ul > li > div .core > ul > li').each(function() {
 			var p = $(this);
-			if ( p.children('li').size() > 1 ) {
+			if ( p.children('ul').size() > 1 ) {
 				p.append('<span class="span-v num1"></span>');
 			}
-			if ( p.children('li').size() > 2 ) {
+			if ( p.children('ul').size() > 2 ) {
 				p.append('<span class="span-v num2"></span>');
 			}
-			if ( p.children('li').size() > 3 ) {
-				var v = Math.floor((p.children('li').size()-1)/3);
+			if ( p.children('ul').size() > 3 ) {
+				var v = Math.floor((p.children('ul').size()-1)/3);
 				for ( var i = 1; i <= v; i++ ) {
 					p.append('<span class="span-h num'+i+'"></span>');
 				}
@@ -286,23 +286,23 @@ $(document).ready(function() {
 			var p = $('nav .core > ul:nth-child('+eval($(this).index()+1)+')');
 			$(this).addClass('active').siblings().removeClass();
 			p.show().siblings().hide();
-			if ( p.children('li').size() > 1 ) {
+			if ( p.children('li').children('ul').size() > 1 ) {
 				p.find('.span-v.num1').css({
-					'left': p.children('li:nth-child(2)').position().left-21+'px',
-					'height': p.outerHeight()-20+'px'
+					'left': p.children('li').children('ul:nth-child(2)').position().left-21+'px',
+					'height': p.outerHeight()-34+'px'
 				});
 			}
-			if ( p.children('li').size() > 2 ) {
+			if ( p.children('li').children('ul').size() > 2 ) {
 				p.find('.span-v.num2').css({
-					'left': p.children('li:nth-child(3)').position().left-21+'px',
-					'height': p.outerHeight()-20+'px'
+					'left': p.children('li').children('ul:nth-child(3)').position().left-21+'px',
+					'height': p.outerHeight()-34+'px'
 				});
 			}
-			if ( p.children('li').size() > 3 ) {
-				var v = Math.floor((p.children('li').size()-1)/3);
+			if ( p.children('li').children('ul').size() > 3 ) {
+				var v = Math.floor((p.children('li').children('ul').size()-1)/3);
 				for ( var i = 1; i <= v; i++ ) {
 					p.find('.span-h.num'+i+'').css({
-						'top': p.children('li:nth-child('+eval(i*3+1)+')').position().top-15+'px'
+						'top': p.children('li').children('ul:nth-child('+eval(i*3+1)+')').position().top-15+'px'
 					});
 				}
 			}
