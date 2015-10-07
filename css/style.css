@@ -203,7 +203,7 @@ button::-moz-focus-inner {
 }
 header {
 	position:relative;
-	z-index:12;
+	z-index:13;
 	height:139px;
 	background:#ffffff;
 	-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.25);
@@ -425,7 +425,7 @@ header button:hover {
 }
 nav {
 	position:relative;
-	z-index:11;
+	z-index:12;
 	background:#9eb63f;
 	border-bottom:1px solid #abaeb0;
 	-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.25);
@@ -966,6 +966,8 @@ nav > ul > li > div .core > ul > li > ul li a:hover {
 	border-left:1px dotted #ff5e35;
 }
 .introduction .rc .note p {
+	overflow:hidden;
+	max-height:91px;
 	color:#3f3e3c;
 	font-size:11px;
 	line-height:13px;
@@ -1453,6 +1455,9 @@ nav > ul > li > div .core > ul > li > ul li a:hover {
 	text-align:center;
 	padding-left:1px;
 	margin:0 18px;
+}
+.list-p > li input[type="submit"] {
+	display:none;
 }
 .list-p > li.right > div, .same .jcarousel-item.right > div {
 	left:auto;

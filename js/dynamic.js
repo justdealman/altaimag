@@ -413,6 +413,10 @@ $(document).ready(function() {
 		columnWidth: 241,
 		itemSelector: 'li'
 	});
+	$('.list-p > li .add, .same .jcarousel-item .add').bind('click', function(event) {
+		$(this).siblings('input[type="submit"]').trigger('click');
+		event.preventDefault();
+	});
 });
 $(window).resize(function() {
 	if ( $('.slider').length > 0 ) {
