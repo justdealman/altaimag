@@ -2628,14 +2628,15 @@ footer .additional h5 img {
 	padding:0 4px 1px;
 	border:1px solid #9eb63f;
 }
-.product .information > div > div .quantity {
+.product .information > div form div .quantity {
 	position:absolute;
 	left:75px;
 	top:2px;
 	width:80px;
 	height:17px;
+	padding:0;
 }
-.product .information > div > div .quantity .minus, .product .information > div > div .quantity .plus {
+.product .information > div form div .quantity .minus, .product .information > div form div .quantity .plus {
 	position:absolute;
 	top:0;
 	display:block;
@@ -2643,11 +2644,11 @@ footer .additional h5 img {
 	height:17px;
 	cursor:pointer;
 }
-.product .information > div > div .quantity .minus {
+.product .information > div form div .quantity .minus {
 	left:0;
 	background:url('../img/quantity_icon_g.png') no-repeat left top;
 }
-.product .information > div > div .quantity .plus {
+.product .information > div form div .quantity .plus {
 	right:0;
 	background:url('../img/quantity_icon_g.png') no-repeat left -17px;
 }
@@ -3435,19 +3436,15 @@ footer .additional h5 img {
 	clear:both;
 	overflow:hidden;
 	margin:0;
-}
-.modal .city ul li {
-	float:left;
-	width:30%;
-	margin:0 0 0 5%;
-}
-.modal .city ul li:first-child {
-	margin-left:0;
+	-moz-column-count:3;
+    -webkit-column-count:3;
+    column-count:3;
 }
 .modal .city ul li p {
 	font-size:13px;
 	line-height:16px;
-	margin:0 0 5px;
+	padding:0 0 5px;
+	margin:0;
 }
 .modal .city ul li p a {
 	color:#565656;

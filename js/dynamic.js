@@ -309,6 +309,9 @@ $(document).ready(function() {
 		});
 	}
 	$('.modal input, .modal textarea, .order-b .form input, .order-b .form textarea, .order-b .userform input, .order-b .userform textarea, .contacts-b .form input, .contacts-b .form textarea').each(function() {
+		if ( $(this).val().length > 0 ) {
+			$(this).parent().addClass('complete').removeClass('focus');
+		}
 		$(this).focusin(function() {
 			$(this).parent().addClass('focus');
 		});
