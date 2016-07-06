@@ -249,8 +249,8 @@ $(document).ready(function() {
 		window.location = $(this).attr('data-href');
 		event.preventDefault();
 	});
-	if ( $('nav > ul > li > div .core ul > li').length > 0 ) {
-		$('nav > ul > li > div .core > ul > li').each(function() {
+	if ( $('nav > div > ul > li > div .core ul > li').length > 0 ) {
+		$('nav > div > ul > li > div .core > ul > li').each(function() {
 			var p = $(this);
 			if ( p.children('ul').size() > 1 ) {
 				p.append('<span class="span-v num1"></span>');
