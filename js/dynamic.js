@@ -420,6 +420,12 @@ $(document).ready(function() {
 		$(this).siblings('input[type="submit"]').trigger('click');
 		event.preventDefault();
 	});
+	$('.product .photo .preview li').on('click', function(e) {
+		e.preventDefault();
+		var t = $(this).parents('.photo').find('.big');
+		t.find('[data-b="'+$(this).attr('data-p')+'"]').stop().fadeIn(200).siblings('[data-b]').fadeOut(200);
+		$(this).addClass('active').siblings().removeClass('active');
+	}).filter(':first').click();
 });
 $(window).resize(function() {
 	if ( $('.slider').length > 0 ) {
