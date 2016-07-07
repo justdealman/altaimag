@@ -435,13 +435,6 @@ $(document).ready(function() {
 			vertical: true
 		});
 	}
-	if ( $('body > footer').length > 0 ) {
-		var fHeight = $('footer').outerHeight();
-		$('footer').css({
-			'margin-top': -fHeight+'px'
-		});
-		$('.wrapper').append('<div class="clear" style="height:'+$(fHeight)+'px"></div>');
-	}
 });
 $(window).resize(function() {
 	if ( $('.slider').length > 0 ) {
