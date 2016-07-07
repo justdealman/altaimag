@@ -426,6 +426,15 @@ $(document).ready(function() {
 		t.find('[data-b="'+$(this).attr('data-p')+'"]').stop().fadeIn(200).siblings('[data-b]').fadeOut(200);
 		$(this).addClass('active').siblings().removeClass('active');
 	}).filter(':first').click();
+	if ( $('.card .preview li').length > 3 ) {
+		$('.card .preview ul').jcarousel({
+			scroll: 1,
+			animation: 250,
+			easing: 'easeInOutQuad',
+			wrap: 'circular',
+			vertical: true
+		});
+	}
 });
 $(window).resize(function() {
 	if ( $('.slider').length > 0 ) {

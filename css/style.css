@@ -2568,17 +2568,59 @@ footer .additional h5 img {
 	width:66px;
 	margin:0;
 }
-.product .photo .preview li {
+.product .photo .preview .jcarousel-container {
 	position:relative;
+	width:64px;
+	height:171px;
+}
+.product .photo .preview .jcarousel-prev, .product .photo .preview .jcarousel-next {
+	position:absolute;
+	left:0;
+	width:64px;
+	height:22px;
+	cursor:pointer;
+	background-image:url('../img/carousel-arrows.png');
+	background-repeat:no-repeat;
+	border:1px solid #d4d4d4;
+}
+.product .photo .preview .jcarousel-prev {
+	top:-34px;
+	background-position:left top;
+	border-radius:4px 4px 0 0;
+}
+.product .photo .preview .jcarousel-prev:hover {
+	background-position:left bottom;
+	border-color:#9eb63f;
+}
+.product .photo .preview .jcarousel-next {
+	bottom:-34px;
+	background-position:right top;
+	border-radius:0 0 4px 4px;
+}
+.product .photo .preview .jcarousel-next:hover {
+	background-position:right bottom;
+	border-color:#9eb63f;
+}
+.product .photo .preview .jcarousel-clip {
+	overflow:hidden;
+	width:66px;
+	height:171px;
+}
+.product .photo .preview ul {
+	margin:0;
+}
+.product .photo .preview ul li {
+	position:relative;
+	width:64px;
 	height:49px;
 	cursor:pointer;
 	margin:0 0 9px;
 	border:1px solid #d4d4d4;
 }
-.product .photo .preview li.active {
+.product .photo .preview ul li.active {
 	border-color:#9eb63f;
 }
-.product .photo .preview li img {
+.product .photo .preview ul li img {
 	position:absolute;
 	top:0;
 	right:0;
