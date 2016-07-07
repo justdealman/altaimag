@@ -127,7 +127,7 @@ $(document).ready(function() {
 		var count = parseInt($input.val()) - 1;
 		count = count < 1 ? 1 : count;
 		$input.attr('data',count);
-		if ( $(this).parents('.list-p').length > 0 ) {
+		if ( $(this).parents('.list-p, .card').length > 0 ) {
 			$input.val($input.attr('data')+' шт.');
 		}
 		else {
@@ -139,7 +139,7 @@ $(document).ready(function() {
 	$('.plus').click(function () {
 		var $input = $(this).parent().find('input');
 		$input.attr('data',parseInt($input.val()) + 1);
-		if ( $(this).parents('.list-p').length > 0 ) {
+		if ( $(this).parents('.list-p, .card').length > 0 ) {
 			$input.val($input.attr('data')+' шт.');
 		}
 		else {
