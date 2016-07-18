@@ -249,8 +249,8 @@ $(document).ready(function() {
 		window.location = $(this).attr('data-href');
 		event.preventDefault();
 	});
-	if ( $('nav > div > ul > li > div .core ul > li').length > 0 ) {
-		$('nav > div > ul > li > div .core > ul > li').each(function() {
+	if ( $('nav > ul > li > div .core ul > li').length > 0 ) {
+		$('nav > ul > li > div .core > ul > li').each(function() {
 			var p = $(this);
 			if ( p.children('ul').size() > 1 ) {
 				p.append('<span class="span-v num1"></span>');
@@ -423,7 +423,8 @@ $(document).ready(function() {
 	$('.product .photo .preview li').on('click', function(e) {
 		e.preventDefault();
 		var t = $(this).parents('.photo').find('.big');
-		t.find('[data-b="'+$(this).attr('data-p')+'"]').stop().fadeIn(200).siblings('[data-b]').fadeOut(200);
+		t.find('[data-b]').stop().fadeOut(200);
+		t.find('[data-b="'+$(this).attr('data-p')+'"]').stop().fadeIn(200);
 		$(this).addClass('active').siblings().removeClass('active');
 	}).filter(':first').click();
 	if ( $('.card .preview li').length > 3 ) {
